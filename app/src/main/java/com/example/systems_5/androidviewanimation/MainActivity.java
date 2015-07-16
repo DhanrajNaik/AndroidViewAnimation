@@ -1,5 +1,6 @@
 package com.example.systems_5.androidviewanimation;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
@@ -16,6 +18,7 @@ public class MainActivity extends ActionBarActivity {
 
     Spinner sp1;
     ImageView img1;
+    Button nextPage ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +26,15 @@ public class MainActivity extends ActionBarActivity {
 
         sp1 = (Spinner) findViewById(R.id.spinner1);
         img1= (ImageView) findViewById(R.id.image1);
+        nextPage = (Button) findViewById(R.id.nextBtn);
+        nextPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent nextintent = new Intent(MainActivity.this,TranslateAnimation.class);
+                startActivity(nextintent);
+
+            }
+        });
 
         sp1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
