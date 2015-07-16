@@ -18,6 +18,8 @@
         </activity>
 
         <activity android:name=".TranslateAnimation"/>
+
+        <activity android:name=".TwoViews"/>
     </application>
 
 </manifest>

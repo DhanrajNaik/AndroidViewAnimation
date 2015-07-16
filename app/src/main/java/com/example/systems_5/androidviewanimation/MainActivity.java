@@ -18,7 +18,7 @@ public class MainActivity extends ActionBarActivity {
 
     Spinner sp1;
     ImageView img1;
-    Button nextPage ;
+    Button nextPage,twoViews ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +33,15 @@ public class MainActivity extends ActionBarActivity {
                 Intent nextintent = new Intent(MainActivity.this,TranslateAnimation.class);
                 startActivity(nextintent);
 
+            }
+        });
+
+        twoViews = (Button) findViewById(R.id.twoviewsBtn);
+        twoViews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent twoviv = new Intent(MainActivity.this,TwoViews.class);
+                startActivity(twoviv);
             }
         });
 
