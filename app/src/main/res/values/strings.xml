@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AndroidViewAnimation</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="animation">
+        <item>alpha</item>
+        <item>rotate</item>
+        <item>translate</item>
+        <item>scale</item>
+    </string-array>
+</resources>
